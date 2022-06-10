@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:25637",
+      "sslPort": 44337
+    }
+  },
+  "profiles": {
+    "HealthChecks": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "healthchecks-ui#/healthchecks",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7114;http://localhost:5114",
+      "dotnetRunMessages": true
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "healthchecks-ui#/healthchecks",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/healthchecks-ui#/healthchecks",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

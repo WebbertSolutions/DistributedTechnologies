@@ -1,0 +1,25 @@
+Testing code that uses EF Core
+	https://docs.microsoft.com/en-us/ef/core/testing/
+
+Issues with different providers
+	https://docs.microsoft.com/en-us/ef/core/testing/testing-sample#issues-using-different-database-providers
+
+Sharing databases between tests - https://docs.microsoft.com/en-us/ef/core/testing/sharing-databases
+	The EF Core testing sample showed how to test applications against different database systems. 
+	For that sample, each test created a new database. This is a good pattern when using SQLite or the 
+	EF in-memory database, but it can involve significant overhead when using other database systems.
+
+Sample: https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/core/Miscellaneous/Testing/ItemsWebApi
+	Contains way to use SQL Server / SQLite / EF In-memory database providers
+
+
+
+
+docker run -d --name broker      -p5672:5672 -p15672:15672 --restart always   rabbitmq:3.7-management
+
+docker run -d --name Prometheus  -p9090:9090                                  prom/prometheus
+
+https://docs.docker.com/config/daemon/prometheus/
+docker run -d --name Prometheus --mount type=bind,source=D:/temp/Docker/prometheus.yml,destination=/etc/prometheus/prometheus.yml --publish published=9090,target=9090,protocol=tcp prom/prometheus
+
+docker run -d --net=host --name Prometheus --mount type=bind,source=D:/temp/Docker/prometheus.yml,destination=/etc/prometheus/prometheus.yml --web.listen-address=:9090 prom/prometheus
